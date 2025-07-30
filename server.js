@@ -55,7 +55,8 @@ io.on('connection', socket => {
 
 const PORT = process.env.PORT || 3000;
 
-const phoneUrl = `https://db07134cea21.ngrok-free.app`;
+// ngrok url here, https required for camera access on iOS. Too lazy to automate this.
+const phoneUrl = `<NGROK URL>`;
 qrcodeTerminal.generate(phoneUrl, { small: true });
 
 srv.listen(PORT, host, () => console.log(`Server listening on http://${host}:${PORT}`));
