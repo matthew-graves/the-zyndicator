@@ -1,0 +1,25 @@
+{
+    "name": "Zyn Scanner Dev Container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "editor.formatOnSave": true
+    },
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "ms-azuretools.vscode-docker",
+        "ms-vscode.vscode-typescript-tslint-plugin"
+    ],
+    "runArgs": [
+        "--publish=3000:3000"
+    ],
+    "forwardPorts": [
+        3000
+    ],
+    "postCreateCommand": "npm install",
+    "remoteUser": "node"
+}
